@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('../partials/head') %>
+</head>
+
+<body>
+    <%- include('../partials/nav') %>
+    <div class="container mb-3">
+        <form action="/posts/<%= post._id %>?_method=put" method="post">
+            <div class="form-group newLabel">
+                <div><label for="title" style="padding: 2px;">Title</label></div>
+                <input type="text" id="title" name="title" value="<%= post.title %>" class="form-control" />
+            </div>
+            <div class="form-group newLabel">
+                <div><label for="body">Text</label></div>
+                <textarea id="body" name="body" rows="6" class="form-control"><%= post.body %></textarea>
+            </div>
+            <div style="float: right;">
+                <a class="btn" href="/posts">Back</a>
+                <button class="btn" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
