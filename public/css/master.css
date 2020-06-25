@@ -1,3 +1,44 @@
-body {
+nav{
     font-family: 'Pangolin', sans-serif;
-  }
+    background-color: lightsalmon;
+}
+
+.navBrand:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.boardTitle {
+    font-family: 'Pangolin', sans-serif;
+}
+
+.noData {
+    font-family: 'Pangolin', sans-serif;
+    text-align: center;
+}
+
+body, .nav-item {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+thead th, .btn {
+    font-family: 'Pangolin', sans-serif;
+    background-color : lightsalmon;
+}
+
+a {
+    color: black;
+}
+
+.btn:hover {
+    color: white;
+}
+
+.title:hover {
+    text-decoration: none;
+    color : lightsalmon;
+}
+
+.newLabel div {
+    font-family: 'Pangolin', sans-serif;
+}

@@ -8,7 +8,7 @@ mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
-mongoose.connect("");
+mongoose.connect(process.env.MONGO_DB);
 
 const db = mongoose.connection;
 
@@ -31,3 +31,4 @@ app.use(bodyParder.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
 
 app.use('/', require('./routes/home'));
+app.use('/posts', require('./routes/posts'));

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('../partials/head') %>
+    </head>
+    <body>
+        <%- include('../partials/nav') %>
+        <div class="container mb-3">
+        <h2 class="boardTitle mb-3">Board</h2>
+        <table class="board-table table border-bottom">
+            <thead class="">
+                <tr>
+                    <th style="width: 74%;">Title</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if(posts == null || posts.length == 0 ) { %>
+                    <tr>
+                        <td class="noData" colspan="2">There is no data to show :( </td>
+                    </tr>
+                <% } posts.forEach(function(post) { %>
+                    <tr>
+                        <td class="title" onclick="location.href='/posts/<%= post._id %>'">
+                            <span><%= post.title %></span>
+                        </td>
+                        <td class="date">
+                            <span data-date-time="<%= post.createdAt %>"></span>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        <a style="float: right;"class="btn" href="/posts/new">NEW</a>
+    </div>
+    </body>
+
+</html>
